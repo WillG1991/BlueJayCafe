@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,17 @@
             font-family: 'Amnestia Normal';
             src: url('fonts/AmnestiaNormal.otf');
         }
+
         @font-face {
             font-family: 'Brandon Grotesque Medium';
             src: url('fonts/BrandonGrotesqueMedium.otf');
         }
+
         @font-face {
             font-family: 'Chaparral Pro Subheader';
             src: url('fonts/ChaparralProSubheader.otf');
         }
+
         body {
             font-family: 'Brandon Grotesque Medium', sans-serif;
             margin: 0;
@@ -24,24 +28,29 @@
             background-color: #f3f3f3;
             color: white;
             text-align: center;
+            overflow-x: hidden;
         }
+
         header {
             padding: 20px;
             background-color: white;
-            text-align: center; /* Center the header content */
+            text-align: center;
         }
+
         header img {
             width: 100%;
             max-width: 300px;
         }
+
         .hero {
             position: relative;
-            height: 80vh; /* Adjust height as needed to show most of the image */
+            height: 80vh;
             background-image: url('images/AA5BED81-0513-4A96-925E-F8E6B12A9F7A (1).JPEG');
             background-size: cover;
             background-position: bottom;
             overflow: hidden;
         }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -49,8 +58,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(211, 211, 211, 0.5); /* Light grey overlay */
+            background-color: rgba(211, 211, 211, 0.5);
         }
+
         .hero-content {
             position: absolute;
             top: 0;
@@ -63,18 +73,22 @@
             color: white;
             flex-direction: column;
             z-index: 1;
-            font-family: 'Brandon Grotesque Medium', sans-serif; /* Use Brandon Grotesque Medium font */
+            font-family: 'Brandon Grotesque Medium', sans-serif;
         }
+
         .hero-content p {
             margin: 10px 0;
             color: white;
         }
+
         .hero-content p:first-child {
-            font-size: 4em; /* Twice the size of the second paragraph */
+            font-size: 2em;
         }
+
         .hero-content p:last-child {
-            font-size: 2em; /* Bigger than the previous size */
+            font-size: 1.5em;
         }
+
         .content {
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
@@ -83,36 +97,43 @@
             margin: 20px auto;
             border-radius: 8px;
         }
+
         .content h2 {
             font-family: 'Brandon Grotesque Medium', sans-serif;
         }
+
         .footer {
-            background-color: #77b9d2; /* Use the blue color from the provided image */
-            padding: 40px 20px; /* Increased padding for more space */
+            background-color: #77b9d2;
+            padding: 40px 20px;
             position: relative;
             bottom: 0;
             width: 100%;
             color: white;
-            text-align: center; /* Center the footer content */
+            text-align: center;
         }
+
         .footer img {
-            width: 150px; /* Ensure the BJC image is larger */
-            margin-bottom: 20px; /* Add space below the image */
+            width: 150px;
+            margin-bottom: 20px;
         }
+
         .footer h2 {
-            font-size: 2em; /* Increased size for "Location" heading */
+            font-size: 2em;
             margin-bottom: 10px;
         }
+
         .footer p.address {
             font-family: 'Chaparral Pro Subheader', serif;
-            font-size: 1.2em; /* Increased size for address */
+            font-size: 1.2em;
             margin: 5px 0;
         }
+
         .footer p.copyright {
             font-family: 'Chaparral Pro Subheader', serif;
-            font-size: 1em; /* Original size for copyright */
+            font-size: 1em;
             margin: 5px 0;
         }
+
         .gallery img {
             max-width: 30%;
             margin: 10px;
@@ -120,10 +141,12 @@
             border-radius: 4px;
             padding: 5px;
         }
+
         .gallery a {
             display: inline-block;
             margin: 20px;
         }
+
         .contact-form {
             background-color: white;
             color: navy;
@@ -131,18 +154,21 @@
             border-radius: 8px;
             max-width: 600px;
             margin: 20px auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .contact-form input, .contact-form textarea {
+
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border-radius: 4px;
             border: 1px solid #ddd;
         }
+
         .contact-form button {
             padding: 10px 20px;
-            background-color: #000080; /* Changed button color to navy blue */
+            background-color: #000080;
             color: white;
             border: none;
             border-radius: 4px;
@@ -150,18 +176,21 @@
             margin-top: 20px;
             font-family: 'Brandon Grotesque Medium', sans-serif;
         }
+
         .form-section {
             background-color: white;
-            padding: 40px 20px; /* Added padding for more space at the top and bottom */
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
+
         .form-section h2 {
             color: navy;
             margin-bottom: 20px;
         }
+
         .form-section form {
             display: flex;
             flex-direction: column;
@@ -169,24 +198,29 @@
             width: 100%;
             max-width: 400px;
         }
+
         .form-section input[type="email"] {
-            margin-bottom: 20px; /* Add space between the input and the button */
+            margin-bottom: 20px;
         }
+
         .footer .instagram {
             width: 30px;
             margin-top: 10px;
         }
+
         .menu-link {
-            font-size: 2em; /* Increased font size for the menu link */
+            font-size: 2em;
             color: navy;
             text-decoration: none;
             margin-bottom: 20px;
             display: inline-block;
         }
+
         .menu-section {
             padding: 40px 20px;
             background-color: white;
         }
+
         .menu-section img {
             max-width: 60%;
             margin: 10px auto;
@@ -196,27 +230,31 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
         #menu-backdrop {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0, 0, 0, 0.8);
             display: none;
             align-items: center;
             justify-content: center;
             z-index: 1000;
         }
+
         #menu-container {
             position: relative;
             max-width: 80%;
             max-height: 80%;
         }
+
         #menu-container img {
             width: 100%;
             height: auto;
         }
+
         .arrow {
             position: absolute;
             top: 50%;
@@ -229,12 +267,15 @@
             border-radius: 5px;
             font-size: 1em;
         }
+
         .arrow-left {
             left: -50px;
         }
+
         .arrow-right {
             right: -50px;
         }
+
         .close-btn {
             position: absolute;
             top: -40px;
@@ -248,20 +289,55 @@
             font-size: 1em;
         }
 
-        /* Media Queries */
         @media (max-width: 768px) {
             .hero {
-                background-attachment: scroll; /* Change to scroll for mobile */
+                background-attachment: scroll;
+            }
+
+            .hero-content p:first-child {
+                font-size: 1.5em;
+            }
+
+            .hero-content p:last-child {
+                font-size: 1.2em;
+            }
+
+            .footer img {
+                width: 100px;
+            }
+
+            .footer h2 {
+                font-size: 1.5em;
+            }
+
+            .footer p.address {
+                font-size: 1em;
+            }
+
+            .footer p.copyright {
+                font-size: 0.8em;
+            }
+
+            .arrow-left,
+            .arrow-right {
+                left: 10px;
+                right: 10px;
+            }
+
+            .close-btn {
+                top: 10px;
+                right: 10px;
             }
         }
 
         @media (min-width: 769px) {
             .hero {
-                background-attachment: fixed; /* Change to fixed for desktop */
+                background-attachment: fixed;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <img src="images/Blue Jay Banner - transparent.svg" alt="Blue Jay Cafe Logo">
@@ -279,9 +355,9 @@
     <div class="form-section">
         <h2>Join Our Mailing List</h2>
         <form action="https://squareup.com/outreach/5gsfuy/subscribe" method="POST" target="_blank">
-            <input type="email" name="email_address" placeholder="Your Email Address" style="height: 38px; padding: 0 16px; font-size: 14px; border: 1px solid #bec3c8; border-radius: 3px; font-family: 'Helvetica Neue', Helvetica, sans-serif;">
+            <input type="email" name="email_address" placeholder="Your Email Address">
             <input type="hidden" name="embed" value="true">
-            <button type="submit" style="cursor: pointer; background-color: #000080; color: white; height: 40px; border: 0; border-radius: 3px; font-size: 14px; padding: 0 16px; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: 500; margin-top: 20px;">Join Now</button>
+            <button type="submit">Join Now</button>
         </form>
     </div>
     <div class="footer">
@@ -323,4 +399,5 @@
         }
     </script>
 </body>
+
 </html>
