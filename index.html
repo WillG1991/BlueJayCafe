@@ -39,7 +39,6 @@
             height: 80vh; /* Adjust height as needed to show most of the image */
             background-image: url('images/AA5BED81-0513-4A96-925E-F8E6B12A9F7A (1).JPEG');
             background-size: cover;
-            background-attachment: fixed;
             background-position: bottom;
             overflow: hidden;
         }
@@ -247,6 +246,19 @@
             border: none;
             border-radius: 5px;
             font-size: 1em;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll; /* Change to scroll for mobile */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hero {
+                background-attachment: fixed; /* Change to fixed for desktop */
+            }
         }
     </style>
 </head>
