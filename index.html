@@ -152,7 +152,6 @@
             font-family: 'Brandon Grotesque Medium', sans-serif;
         }
         .form-section {
-            height: 30vh;
             background-color: white;
             padding: 40px 20px; /* Added padding for more space at the top and bottom */
             display: flex;
@@ -184,6 +183,19 @@
             text-decoration: none;
             margin-bottom: 20px;
             display: inline-block;
+        }
+        .menu-section {
+            padding: 40px 20px;
+            background-color: white;
+        }
+        .menu-section img {
+            max-width: 60%;
+            margin: 10px auto;
+            display: block;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
         }
         #menu-backdrop {
             position: fixed;
@@ -219,15 +231,15 @@
             font-size: 1em;
         }
         .arrow-left {
-            left: 10px;
+            left: -50px;
         }
         .arrow-right {
-            right: 10px;
+            right: -50px;
         }
         .close-btn {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: -40px;
+            right: -40px;
             background: white;
             color: black;
             padding: 10px;
@@ -247,8 +259,12 @@
             <p>Family Owned. Locally sourced.</p>
         </div>
     </section>
+    <section class="menu-section">
+        <a href="javascript:void(0)" class="menu-link" onclick="openImage(0)">MENU</a>
+        <img src="images/menu1.JPEG" alt="Menu 1 Image" onclick="openImage(0)">
+        <img src="images/menu2.JPEG" alt="Menu 2 Image" onclick="openImage(1)">
+    </section>
     <div class="form-section">
-        <a href="javascript:void(0)" class="menu-link" onclick="showMenu()">MENU</a>
         <h2>Join Our Mailing List</h2>
         <form action="https://squareup.com/outreach/5gsfuy/subscribe" method="POST" target="_blank">
             <input type="email" name="email_address" placeholder="Your Email Address" style="height: 38px; padding: 0 16px; font-size: 14px; border: 1px solid #bec3c8; border-radius: 3px; font-family: 'Helvetica Neue', Helvetica, sans-serif;">
@@ -265,15 +281,15 @@
     </div>
     <div id="menu-backdrop">
         <div id="menu-container">
-            <img id="menu-image" src="images/menu1.JPEG" alt="Menu Image">
-            <button class="arrow arrow-left" onclick="prevImage()">←</button>
-            <button class="arrow arrow-right" onclick="nextImage()">→</button>
+            <img id="popup-image" src="" alt="Menu Image">
+            <button class="arrow arrow-left" onclick="changeImage(-1)">&#9664;</button>
+            <button class="arrow arrow-right" onclick="changeImage(1)">&#9654;</button>
             <button class="close-btn" onclick="closeMenu()">✖</button>
         </div>
     </div>
     <script>
         const images = ['images/menu1.JPEG', 'images/menu2.JPEG'];
-        let currentImageIndex = 0;
+        let currentIndex = 0;
 
         function showMenu() {
             document.getElementById('menu-backdrop').style.display = 'flex';
@@ -283,14 +299,15 @@
             document.getElementById('menu-backdrop').style.display = 'none';
         }
 
-        function prevImage() {
-            currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : images.length - 1;
-            document.getElementById('menu-image').src = images[currentImageIndex];
+        function openImage(index) {
+            currentIndex = index;
+            document.getElementById('popup-image').src = images[currentIndex];
+            showMenu();
         }
 
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            document.getElementById('menu-image').src = images[currentImageIndex];
+        function changeImage(direction) {
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            document.getElementById('popup-image').src = images[currentIndex];
         }
     </script>
 </body>
